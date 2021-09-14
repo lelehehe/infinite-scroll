@@ -2,4 +2,10 @@
   .isRead {
     border: 1px solid red;
   }
+  .content {
+    height: 500px;
+    border: solid 12px blue;
+    margin: 50px;
+    overflow: scroll;
+  }
 }

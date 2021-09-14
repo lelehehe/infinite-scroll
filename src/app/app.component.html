@@ -1,8 +1,9 @@
 <button mat-button (click)="markRead()">Mark Read</button>
-<div
+<div class="content"
   infinite-scroll
   [infiniteScrollDistance]="distance"
   [infiniteScrollThrottle]="throttle"
+  [scrollWindow]="false"
   (scrolled)="onScroll()"
 >
   <mat-card *ngFor="let brewery of breweries" [ngClass]="{'isRead': brewery.isRead}">
