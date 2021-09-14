@@ -16,4 +16,5 @@ export interface Brewery {
   website_url: string;
   updated_at: string;
   created_at: string;
+  isRead: boolean;
 }

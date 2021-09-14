@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   throttle = 0;
   distance = 2;
   page = 1;
-  breweries: Brewery[] | any[] = [];
+  breweries: Brewery[]= [];
 
   constructor(private breweryService: BreweryService) {}
 
@@ -29,5 +29,10 @@ export class AppComponent implements OnInit {
       .subscribe((breweries: Brewery[]) => {
         this.breweries.push(...breweries);
       });
+  }
+
+  markRead() {
+    this.breweries = this.breweries.map((item) => ({...item, isRead: true}));
+    console.log(this.breweries);
   }
 }
